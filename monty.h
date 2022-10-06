@@ -48,6 +48,25 @@ typedef struct instruction_s
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 
-int checker(unsigned int line_number, char **commands, stack_t **head, FILE *fptr);
+int checker(unsiged int line_number, char **commands, stack_t **head, FILE *fptr);
 void (*_commands(char *opcode, unsigned int ln))(stack_t **stack, unsigned int);
+
+void _sfree(stack_t *args);
+void _free(stack_t **head, unsigned int n);
+char *get_line(char *file);
+char **split_line(char *line);
+void *_realloc(void *ptr, size_t old_size, size_t new_size);
+int is_number(char *commands);
+
+void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+
+void swap(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
+
+void nop(stack_t **stack, unsigned int line_number);
+void sub(stack_t **stack, unsigned int line_number);
+void _div(stack_t **stack, unsigned int line_number);
+void mul(stack_t **stack, unsigned int line_number);
+void mod(stack_t **stack, unsigned int line_number);
 #endif
