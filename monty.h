@@ -47,4 +47,7 @@ typedef struct instruction_s
 
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
+
+int checker(unsigned int line_number, char **commands, stack_t **head, FILE *fptr);
+void (*_commands(char *opcode, unsigned int ln))(stack_t **stack, unsigned int);
 #endif
